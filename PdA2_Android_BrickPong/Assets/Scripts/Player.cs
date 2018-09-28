@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        speed = 0.3f;
+        speed = 1f;
         characterBody = GetComponent<Rigidbody2D>();
     }
 	
@@ -24,7 +24,7 @@ public class Player : MonoBehaviour {
     public void LUPTouch()
     {
         Debug.Log("LUP");
-        characterBody.AddForce(new Vector2(VerticalInput * speed * Time.deltaTime, 0));
+        transform.Translate(0, speed, 0);
 
     }
     public void LDownTouch()
@@ -32,14 +32,14 @@ public class Player : MonoBehaviour {
         Debug.Log("LDown");
         transform.Translate(0, -speed, 0);
     }
-    public void RUPTouch()
+    /*public void RUPTouch()
     {
         Debug.Log("RUP");
     }
     public void RDownTouch()
     {
         Debug.Log("RDown");
-    }
+    }*/
 
 
 }
