@@ -65,9 +65,9 @@
     <Compile Include="Assets\Scripts\Menu_Play.cs" />
     <Compile Include="Assets\Scripts\Menu_Skip.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Player2.cs" />
     <Compile Include="Assets\Scripts\Quit_Game.cs" />
     <Compile Include="Assets\Scripts\Scoreboard_Controller.cs" />
-    <Compile Include="Assets\Scripts\TouchScreen.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/GitHub/ArkaPong_03/PdA2_Android_BrickPong/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

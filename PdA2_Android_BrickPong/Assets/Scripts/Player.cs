@@ -4,42 +4,47 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    float speed;
+    public float movSpeed;
+    public GameObject character;
 
     private Rigidbody2D characterBody;
-
-    float VerticalInput;
+    private float ScreenWidth;
+    private float ScreenHeight;
 
     // Use this for initialization
     void Start () {
-        speed = 1f;
-        characterBody = GetComponent<Rigidbody2D>();
+        ScreenHeight = Screen.height;
+        ScreenWidth = Screen.width;
+        characterBody = character.GetComponent<Rigidbody2D>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        int i = 0;
+
+        //Mov Player Left
+        while (i < Input.touchCount)
+        {
+            if (Input.GetTouch (i).position.x < ScreenWidth / 2 && Input.GetTouch (i).position.y > ScreenHeight / 2)
+            {
+
+                RunCharacter(1.0f);
+
+            }
+            if (Input.GetTouch(i).position.x < ScreenWidth / 2 && Input.GetTouch (i).position.y < ScreenHeight /2)
+            {
+
+                RunCharacter(-1.0f);
+
+            }
+            ++i;
+        }
 	}
 
-    public void LUPTouch()
+    private void RunCharacter(float verticalInput)
     {
-        Debug.Log("LUP");
-        transform.Translate(0, speed, 0);
-
+        //characterBody.AddForce(new Vector2(horizontalInput * movSpeed * Time.deltaTime, 0));
+        characterBody.transform.Translate(new Vector2(0, verticalInput * movSpeed * Time.deltaTime));
     }
-    public void LDownTouch()
-    {
-        Debug.Log("LDown");
-        transform.Translate(0, -speed, 0);
-    }
-    /*public void RUPTouch()
-    {
-        Debug.Log("RUP");
-    }
-    public void RDownTouch()
-    {
-        Debug.Log("RDown");
-    }*/
-
 
 }
