@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Menu_Skip.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Quit_Game.cs" />
+    <Compile Include="Assets\Scripts\RPB.cs" />
     <Compile Include="Assets\Scripts\Scoreboard_Controller.cs" />
     <Compile Include="Assets\Scripts\TouchScreen.cs" />
     <Reference Include="UnityEditor.StandardEvents">
