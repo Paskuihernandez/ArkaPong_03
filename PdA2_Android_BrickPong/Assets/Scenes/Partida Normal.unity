@@ -1268,7 +1268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c846c0db3540cd4c8932898de74cb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movSpeed: 5
+  movSpeed: 10
   character: {fileID: 1582460440}
 --- !u!114 &282840816
 MonoBehaviour:
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbc157bb1a144545a0ea20977958ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movSpeed: 5
+  movSpeed: 10
   character: {fileID: 75342436}
 --- !u!1 &388701400
 GameObject:

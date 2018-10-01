@@ -92,7 +92,7 @@ public class Ball_Controller : MonoBehaviour
     void LaunchBall()
     {
 
-        speed = Random.Range(6, 12);
+        speed = Random.Range(6, 11);
 
         direccionX = Random.Range(0, 2);
         if (direccionX == 0)
