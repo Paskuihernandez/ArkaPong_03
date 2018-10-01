@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Partida Normal.unity
+- path: Assets/Scenes/Player1Victory.unity
   isLoaded: 1
   isActive: 1

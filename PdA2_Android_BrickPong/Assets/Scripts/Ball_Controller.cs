@@ -5,6 +5,11 @@ using UnityEngine;
 public class Ball_Controller : MonoBehaviour
 {
 
+    int direccionX;
+    int direccionY;
+
+    float speed;
+
     //Tener una referencia para el rigidbody attachado al gameObject
     public Rigidbody rb;
 
@@ -87,49 +92,30 @@ public class Ball_Controller : MonoBehaviour
     void LaunchBall()
     {
 
-        transform.position = Vector2.zero;
+        speed = Random.Range(6, 12);
 
-        //Ball Chooses a direction
-
-        //Flip a coin, determine direction in x-axis
-        int xDirection = Random.Range(0, 2);
-
-        //Flip another coin, determine direction in y-axis
-        int yDirection = Random.Range(0, 3);
-
-
-        Vector2 launchDirection = new Vector2();
-
-        //Check results of one coin toss
-        if (xDirection == 0)
+        direccionX = Random.Range(0, 2);
+        if (direccionX == 0)
         {
-
-            launchDirection.x = -8f;
+            direccionX = 1;
         }
-        if (xDirection == 1)
+        else
         {
-
-            launchDirection.x = 8f;
+            direccionX = -1;
         }
 
-        //Check results of second coin toss
-        if (yDirection == 0)
+        direccionY = Random.Range(0, 2);
+        if (direccionY == 0)
         {
-
-            launchDirection.y = -8f;
+            direccionY = 1;
         }
-        if (yDirection == 1)
+        else
         {
-
-            launchDirection.y = 8f;
-        }
-        if (yDirection == 2)
-        {
-
-            launchDirection.y = 0f;
+            direccionY = -1;
         }
 
-        //Assign velocity based off of where we launch ball
-        rb.velocity = launchDirection;
+        GetComponent<Rigidbody>().velocity = new Vector3(speed * direccionX, speed * direccionY, 0);
+
+
     }
 }

@@ -40,7 +40,7 @@ public class Scoreboard_Controller : MonoBehaviour
         playerOneScoreText.text = playerOneScore.ToString();
 
         //Enter player 1 victory
-        if (playerOneScore > 10)
+        if (playerOneScore > 2)
         {
 
             SceneManager.LoadScene(2);
@@ -55,7 +55,7 @@ public class Scoreboard_Controller : MonoBehaviour
         playerTwoScoreText.text = playerTwoScore.ToString();
 
         //Enter player 2 victory
-        if (playerTwoScore > 10)
+        if (playerTwoScore > 2)
         {
 
             SceneManager.LoadScene(3);
